@@ -11,7 +11,6 @@ namespace UnitySaveSystem
 
         public void AddClass<T>(T classToSave)
         {
-            
             if (Directory.Exists(_saveFolderPath) == false) 
                 Directory.CreateDirectory(_saveFolderPath);
 
