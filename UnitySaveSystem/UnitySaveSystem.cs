@@ -5,9 +5,11 @@ namespace UnitySaveSystem
 {
     public class UnitySaveSystem : MonoBehaviour
     {
-        //public SaveFile[] GetSavesFileFromFolder(string path)
-        //{
-        //    Directory.GetFiles(path, "*.json");
-        //}
+        public void GetSavesFileFromFolder(string path)
+        {
+            var files = Directory.GetFiles(path, "*.json");
+        }
     }
+    
+
 }

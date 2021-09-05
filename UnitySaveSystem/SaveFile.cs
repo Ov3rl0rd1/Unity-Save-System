@@ -6,6 +6,9 @@ namespace UnitySaveSystem
     public class SaveFile
     {
         public readonly string JsonFilePath;
+        public readonly string SaveFolderPath;
+
+        private SaveFileClassesManager saveClassesManager;
 
         public T LoadClass<T>()
         {
@@ -14,20 +17,23 @@ namespace UnitySaveSystem
 
         public void SaveClass<T>(T classToSave)
         {
-            try
-            {
-                JsonUtility.FromJsonOverwrite(JsonFilePath, classToSave);
-            }
-            catch
-            {
-                File.AppendAllText(JsonFilePath, JsonUtility.ToJson(classToSave));
-            }
+            saveClassesManager.AddClass(classToSave, SaveFolderPath);
         }
 
-        public SaveFile(string fullSaveName)
+        public SaveFile(string pathToSave, string saveName)
         {
-            JsonFilePath = fullSaveName + ".json";
-            File.Create(fullSaveName + ".json").Close();
+            SaveFolderPath = pathToSave + saveName;
+            JsonFilePath = SaveFolderPath + saveName + ".json";
+            if (Directory.Exists(JsonFilePath) == false)
+            {
+                Directory.CreateDirectory(SaveFolderPath);
+                File.Create(pathToSave).Close();
+                saveClassesManager = new SaveFileClassesManager(SaveFolderPath);
+            }
+            else
+            {
+                throw new System.Exception("Save file with the same name already exists");
+            }
         }
     }
 }
