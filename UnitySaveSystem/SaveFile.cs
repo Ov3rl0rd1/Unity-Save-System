@@ -17,7 +17,7 @@ namespace UnitySaveSystem
 
         public void SaveClass<T>(T classToSave)
         {
-            saveClassesManager.AddClass(classToSave, SaveFolderPath);
+            saveClassesManager.AddClass(classToSave);
         }
 
         public SaveFile(string pathToSave, string saveName)
