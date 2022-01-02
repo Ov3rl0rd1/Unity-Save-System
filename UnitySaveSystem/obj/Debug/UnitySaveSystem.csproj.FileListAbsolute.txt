@@ -1,7 +1,0 @@
-E:\GitProject\FPS\Assets\Plugins\UnitySaveSystem.dll
-E:\GitProject\FPS\Assets\Plugins\UnitySaveSystem.pdb
-E:\GitProject\SaveSystem\UnitySaveSystem\obj\Debug\UnitySaveSystem.csproj.AssemblyReference.cache
-E:\GitProject\SaveSystem\UnitySaveSystem\obj\Debug\UnitySaveSystem.csproj.CoreCompileInputs.cache
-E:\GitProject\SaveSystem\UnitySaveSystem\obj\Debug\UnitySaveSystem.csproj.CopyComplete
-E:\GitProject\SaveSystem\UnitySaveSystem\obj\Debug\UnitySaveSystem.dll
-E:\GitProject\SaveSystem\UnitySaveSystem\obj\Debug\UnitySaveSystem.pdb
