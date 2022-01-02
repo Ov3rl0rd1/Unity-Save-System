@@ -44,9 +44,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SaveFile.cs" />
-    <Compile Include="SaveFileClassesManager.cs" />
-    <Compile Include="UnitySaveSystem.cs" />
+    <Compile Include="Saver.cs" />
+    <Compile Include="Surrogates.cs" />
+    <Compile Include="UnitySaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
