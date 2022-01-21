@@ -6,28 +6,28 @@ So that you can save the class you must mark it with an attribute [System.Serial
 
 ```C#
 
-  using UnitySaveSystem;
+  using SaveSystem;
   using UnityEngine;
   using System;
 
   public class SaveTest : MonoBehaviour
   {
-    private SaveFile _save;
+    private UnitySaver _saver;
 
     public void Awake()
     {
-        _save = new SaveFile(@"C:\Save\Save1"); // Here you can point the path to your save file.
+        _saver = new UnitySaver(); // Here you can point the path to your save file.
     }
     
     [SerializeField] SaveTestData saveData;
     public void Save()
     {
-        _save.SaveClass(saveData); // This command save your class to JSON file
+        _saver.Save(saveData, "saveName.dat"); // This command save your class to JSON file
     }
 
     public void Load()
     {
-        saveData = _save.LoadClass<SaveTestData>(); // This command try to load your class
+        saveData = _saver.Load<SaveTestData>("saveName.dat"); // This command try to load your class
     }
   }
 
