@@ -22,7 +22,7 @@ So that you can save the class you must mark it with an attribute [System.Serial
     [SerializeField] SaveTestData saveData;
     public void Save()
     {
-        _saver.Save(saveData, "saveName.dat"); // This command save your class to JSON file
+        _saver.Save(saveData, "saveName.dat"); // This command save your class to binary file
     }
 
     public void Load()
